@@ -1,0 +1,748 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_funkcje_8h" xml:lang="pl">
+<title>Dokumentacja pliku funkcje.h</title>
+<indexterm><primary>funkcje.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+</programlisting><simplesect>
+    <title>Funkcje    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_funkcje_8h_1ad62eb2d28dd40ee33d9ff3981489cd04">y_toint</link> (char y_cord)</para>
+</listitem>
+            <listitem><para>string <link linkend="_funkcje_8h_1a7666f7a19c58183a129525c3a4b40ec7">figura_name</link> (int figura_number)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1a968d1a5cced2794d07d040943caeb05a">H_move</link> (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1aed1880e04687e9ec3cf2c0f09a585ff7">G_move</link> (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1affed50109cf9d7406f3f93505c2c3478">S_move</link> (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1aa88d989322777f6cb2aa8165addf5db4">W_move</link> (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1a6aedc44014be43cd9de923e72dd64f63">P_move</link> (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1adc778fee0c72604e27f124250e835a2b">K_move</link> (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1aa139c68b70084a41701f94ca7ca47f2a">roszada</link> (int start_x1, int start_y1, int end_x1, int end_y1, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1abd723494e7e578cc9ea11f1e4daa0e7a">szach</link> (bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1a8ae793b0dd910e1b4818227c4b722936">turn_check</link> (int start_x, int end_x, int start_y, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>int <link linkend="_funkcje_8h_1ac5e01987e69cb78283f36dd8671a78dc">points_check</link> (int start_x, int end_x, int start_y, int end_y, vector&lt; vector&lt; int &gt; &gt; tablica)</para>
+</listitem>
+            <listitem><para>vector&lt; vector&lt; int &gt; &gt; <link linkend="_funkcje_8h_1a77258fa3cfd1986bb32f6187ed17624d">computer_turn</link> (vector&lt; vector&lt; int &gt; &gt; tablica1, vector&lt; vector&lt; bool &gt; &gt; tablica2)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_funkcje_8h_1aeadffb331f419ad4189c13390d2fd239">mat</link> (vector&lt; vector&lt; int &gt; &gt; tablica1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_funkcje_8h_1aadab7413cd8e2df74ba7ce32a7785f84">turn</link> (vector&lt; vector&lt; int &gt; &gt; tablica, vector&lt; vector&lt; bool &gt; &gt; tablica1)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Dokumentacja funkcji</title>
+<anchor xml:id="_funkcje_8h_1a77258fa3cfd1986bb32f6187ed17624d"/><section>
+    <title>computer_turn()</title>
+<indexterm><primary>computer_turn</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>computer_turn</secondary></indexterm>
+<para><computeroutput>vector&lt; vector&lt; int &gt; &gt; computer_turn (vector&lt; vector&lt; int &gt; &gt; tablica1, vector&lt; vector&lt; bool &gt; &gt; tablica2)</computeroutput></para>
+<para>Funkcja, która wyszukuje najlepsze ruchy komputera, biorąc pod uwagę stan tablicy 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tablica1</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica2</entry><entry>
+<para>miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>stan tablicy po ruchu komputera </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1a7666f7a19c58183a129525c3a4b40ec7"/><section>
+    <title>figura_name()</title>
+<indexterm><primary>figura_name</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>figura_name</secondary></indexterm>
+<para><computeroutput>string figura_name (int figura_number)</computeroutput></para>
+<para>Funkcja pobiera liczbę i zapisuje ją jako opisującą ją literę 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>figura_name</entry><entry>
+<para>liczba opisująca figurę </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>literę opisującą figurę </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1aed1880e04687e9ec3cf2c0f09a585ff7"/><section>
+    <title>G_move()</title>
+<indexterm><primary>G_move</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>G_move</secondary></indexterm>
+<para><computeroutput>bool G_move (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości ruchu gońca 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwy ruch gońca </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1a968d1a5cced2794d07d040943caeb05a"/><section>
+    <title>H_move()</title>
+<indexterm><primary>H_move</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>H_move</secondary></indexterm>
+<para><computeroutput>bool H_move (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości ruchu hetmana 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwy ruch hetmana </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1adc778fee0c72604e27f124250e835a2b"/><section>
+    <title>K_move()</title>
+<indexterm><primary>K_move</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>K_move</secondary></indexterm>
+<para><computeroutput>bool K_move (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości ruchu króla 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwy ruch króla </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1aeadffb331f419ad4189c13390d2fd239"/><section>
+    <title>mat()</title>
+<indexterm><primary>mat</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>mat</secondary></indexterm>
+<para><computeroutput>bool mat (vector&lt; vector&lt; int &gt; &gt; tablica1)</computeroutput></para>
+<para>Funkcja sprawdzania matu na tablicy 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tablica1</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest mat na tablicy </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1a6aedc44014be43cd9de923e72dd64f63"/><section>
+    <title>P_move()</title>
+<indexterm><primary>P_move</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>P_move</secondary></indexterm>
+<para><computeroutput>bool P_move (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości ruchu piona 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwy ruch piona </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1ac5e01987e69cb78283f36dd8671a78dc"/><section>
+    <title>points_check()</title>
+<indexterm><primary>points_check</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>points_check</secondary></indexterm>
+<para><computeroutput>int points_check (int start_x, int end_x, int start_y, int end_y, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzająca ile punktów komputer zdobędzie za dany ruch 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>ilość punktów za jeden ruch </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1aa139c68b70084a41701f94ca7ca47f2a"/><section>
+    <title>roszada()</title>
+<indexterm><primary>roszada</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>roszada</secondary></indexterm>
+<para><computeroutput>bool roszada (int start_x1, int start_y1, int end_x1, int end_y1, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości rozszady 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwa roszada </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1affed50109cf9d7406f3f93505c2c3478"/><section>
+    <title>S_move()</title>
+<indexterm><primary>S_move</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>S_move</secondary></indexterm>
+<para><computeroutput>bool S_move (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości ruchu skoczka 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwy ruch skoczka </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1abd723494e7e578cc9ea11f1e4daa0e7a"/><section>
+    <title>szach()</title>
+<indexterm><primary>szach</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>szach</secondary></indexterm>
+<para><computeroutput>bool szach (bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania szachu na tablicy 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest szach na tablicy </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1aadab7413cd8e2df74ba7ce32a7785f84"/><section>
+    <title>turn()</title>
+<indexterm><primary>turn</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>turn</secondary></indexterm>
+<para><computeroutput>void turn (vector&lt; vector&lt; int &gt; &gt; tablica, vector&lt; vector&lt; bool &gt; &gt; tablica1)</computeroutput></para>
+<para>Główna zapętlona funkcja programu, w której wykonywane są wszystkie sprawdzenia ruchu gracza 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica1</entry><entry>
+<para>miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_funkcje_8h_1a8ae793b0dd910e1b4818227c4b722936"/><section>
+    <title>turn_check()</title>
+<indexterm><primary>turn_check</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>turn_check</secondary></indexterm>
+<para><computeroutput>bool turn_check (int start_x, int end_x, int start_y, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości ruchu dla podanej figury przez komputera 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwy taki ruch </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1aa88d989322777f6cb2aa8165addf5db4"/><section>
+    <title>W_move()</title>
+<indexterm><primary>W_move</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>W_move</secondary></indexterm>
+<para><computeroutput>bool W_move (int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</computeroutput></para>
+<para>Funkcja sprawdzania możliwości ruchu wieży 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_x</entry><entry>
+<para>startowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_y</entry><entry>
+<para>startowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_x</entry><entry>
+<para>końcowa współrzędna x </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_y</entry><entry>
+<para>końcowa współrzędna y </para>
+</entry>
+                            </row>
+                            <row>
+<entry>player</entry><entry>
+<para>zmienna gracza </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tablica</entry><entry>
+<para>aktualny stan tablicy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>czy jest możliwy ruch wieży </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_funkcje_8h_1ad62eb2d28dd40ee33d9ff3981489cd04"/><section>
+    <title>y_toint()</title>
+<indexterm><primary>y_toint</primary><secondary>funkcje.h</secondary></indexterm>
+<indexterm><primary>funkcje.h</primary><secondary>y_toint</secondary></indexterm>
+<para><computeroutput>int y_toint (char y_cord)</computeroutput></para>
+<para>Funkcja pobiera literę ze współrzędnej y i zwraca ją jako liczbę 
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>y_toint</entry><entry>
+<para>współrzędna y </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Zwraca</title>
+
+<para>współrzędną y </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

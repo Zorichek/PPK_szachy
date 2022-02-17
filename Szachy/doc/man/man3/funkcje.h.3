@@ -1,0 +1,372 @@
+.TH "funkcje.h" 3 "Wt, 15 lut 2022" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+funkcje.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <string>\fP
+.br
+
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "int \fBy_toint\fP (char y_cord)"
+.br
+.ti -1c
+.RI "string \fBfigura_name\fP (int figura_number)"
+.br
+.ti -1c
+.RI "bool \fBH_move\fP (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBG_move\fP (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBS_move\fP (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBW_move\fP (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBP_move\fP (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBK_move\fP (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBroszada\fP (int start_x1, int start_y1, int end_x1, int end_y1, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBszach\fP (bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "bool \fBturn_check\fP (int start_x, int end_x, int start_y, int end_y, bool player, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "int \fBpoints_check\fP (int start_x, int end_x, int start_y, int end_y, vector< vector< int > > tablica)"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBcomputer_turn\fP (vector< vector< int > > tablica1, vector< vector< bool > > tablica2)"
+.br
+.ti -1c
+.RI "bool \fBmat\fP (vector< vector< int > > tablica1)"
+.br
+.ti -1c
+.RI "void \fBturn\fP (vector< vector< int > > tablica, vector< vector< bool > > tablica1)"
+.br
+.in -1c
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "vector< vector< int > > computer_turn (vector< vector< int > > tablica1, vector< vector< bool > > tablica2)"
+Funkcja, która wyszukuje najlepsze ruchy komputera, biorąc pod uwagę stan tablicy 
+.PP
+\fBParametry\fP
+.RS 4
+\fItablica1\fP aktualny stan tablicy 
+.br
+\fItablica2\fP miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+stan tablicy po ruchu komputera 
+.RE
+.PP
+
+.SS "string figura_name (int figura_number)"
+Funkcja pobiera liczbę i zapisuje ją jako opisującą ją literę 
+.PP
+\fBParametry\fP
+.RS 4
+\fIfigura_name\fP liczba opisująca figurę 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+literę opisującą figurę 
+.RE
+.PP
+
+.SS "bool G_move (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości ruchu gońca 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwy ruch gońca 
+.RE
+.PP
+
+.SS "bool H_move (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości ruchu hetmana 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwy ruch hetmana 
+.RE
+.PP
+
+.SS "bool K_move (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości ruchu króla 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwy ruch króla 
+.RE
+.PP
+
+.SS "bool mat (vector< vector< int > > tablica1)"
+Funkcja sprawdzania matu na tablicy 
+.PP
+\fBParametry\fP
+.RS 4
+\fItablica1\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest mat na tablicy 
+.RE
+.PP
+
+.SS "bool P_move (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości ruchu piona 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwy ruch piona 
+.RE
+.PP
+
+.SS "int points_check (int start_x, int end_x, int start_y, int end_y, vector< vector< int > > tablica)"
+Funkcja sprawdzająca ile punktów komputer zdobędzie za dany ruch 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+ilość punktów za jeden ruch 
+.RE
+.PP
+
+.SS "bool roszada (int start_x1, int start_y1, int end_x1, int end_y1, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości rozszady 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwa roszada 
+.RE
+.PP
+
+.SS "bool S_move (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości ruchu skoczka 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwy ruch skoczka 
+.RE
+.PP
+
+.SS "bool szach (bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania szachu na tablicy 
+.PP
+\fBParametry\fP
+.RS 4
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest szach na tablicy 
+.RE
+.PP
+
+.SS "void turn (vector< vector< int > > tablica, vector< vector< bool > > tablica1)"
+Główna zapętlona funkcja programu, w której wykonywane są wszystkie sprawdzenia ruchu gracza 
+.PP
+\fBParametry\fP
+.RS 4
+\fItablica\fP aktualny stan tablicy 
+.br
+\fItablica1\fP miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu 
+.RE
+.PP
+
+.SS "bool turn_check (int start_x, int end_x, int start_y, int end_y, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości ruchu dla podanej figury przez komputera 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwy taki ruch 
+.RE
+.PP
+
+.SS "bool W_move (int start_x, int start_y, int end_x, int end_y, bool player, vector< vector< int > > tablica)"
+Funkcja sprawdzania możliwości ruchu wieży 
+.PP
+\fBParametry\fP
+.RS 4
+\fIstart_x\fP startowa współrzędna x 
+.br
+\fIstart_y\fP startowa współrzędna y 
+.br
+\fIend_x\fP końcowa współrzędna x 
+.br
+\fIend_y\fP końcowa współrzędna y 
+.br
+\fIplayer\fP zmienna gracza 
+.br
+\fItablica\fP aktualny stan tablicy 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+czy jest możliwy ruch wieży 
+.RE
+.PP
+
+.SS "int y_toint (char y_cord)"
+Funkcja pobiera literę ze współrzędnej y i zwraca ją jako liczbę 
+.PP
+\fBParametry\fP
+.RS 4
+\fIy_toint\fP współrzędna y 
+.RE
+.PP
+\fBZwraca\fP
+.RS 4
+współrzędną y 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla My Project\&.

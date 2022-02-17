@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.3" xml:lang="pl">
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="funkcje_8cpp" kind="file"><name>funkcje.cpp</name>
+    <member refid="funkcje_8cpp_1ad62eb2d28dd40ee33d9ff3981489cd04" kind="function"><name>y_toint</name></member>
+    <member refid="funkcje_8cpp_1a7666f7a19c58183a129525c3a4b40ec7" kind="function"><name>figura_name</name></member>
+    <member refid="funkcje_8cpp_1a968d1a5cced2794d07d040943caeb05a" kind="function"><name>H_move</name></member>
+    <member refid="funkcje_8cpp_1aed1880e04687e9ec3cf2c0f09a585ff7" kind="function"><name>G_move</name></member>
+    <member refid="funkcje_8cpp_1affed50109cf9d7406f3f93505c2c3478" kind="function"><name>S_move</name></member>
+    <member refid="funkcje_8cpp_1aa88d989322777f6cb2aa8165addf5db4" kind="function"><name>W_move</name></member>
+    <member refid="funkcje_8cpp_1a6aedc44014be43cd9de923e72dd64f63" kind="function"><name>P_move</name></member>
+    <member refid="funkcje_8cpp_1adc778fee0c72604e27f124250e835a2b" kind="function"><name>K_move</name></member>
+    <member refid="funkcje_8cpp_1aa139c68b70084a41701f94ca7ca47f2a" kind="function"><name>roszada</name></member>
+    <member refid="funkcje_8cpp_1abd723494e7e578cc9ea11f1e4daa0e7a" kind="function"><name>szach</name></member>
+    <member refid="funkcje_8cpp_1a8ae793b0dd910e1b4818227c4b722936" kind="function"><name>turn_check</name></member>
+    <member refid="funkcje_8cpp_1ac5e01987e69cb78283f36dd8671a78dc" kind="function"><name>points_check</name></member>
+    <member refid="funkcje_8cpp_1a77258fa3cfd1986bb32f6187ed17624d" kind="function"><name>computer_turn</name></member>
+    <member refid="funkcje_8cpp_1aeadffb331f419ad4189c13390d2fd239" kind="function"><name>mat</name></member>
+    <member refid="funkcje_8cpp_1aadab7413cd8e2df74ba7ce32a7785f84" kind="function"><name>turn</name></member>
+  </compound>
+  <compound refid="funkcje_8h" kind="file"><name>funkcje.h</name>
+    <member refid="funkcje_8h_1ad62eb2d28dd40ee33d9ff3981489cd04" kind="function"><name>y_toint</name></member>
+    <member refid="funkcje_8h_1a7666f7a19c58183a129525c3a4b40ec7" kind="function"><name>figura_name</name></member>
+    <member refid="funkcje_8h_1a968d1a5cced2794d07d040943caeb05a" kind="function"><name>H_move</name></member>
+    <member refid="funkcje_8h_1aed1880e04687e9ec3cf2c0f09a585ff7" kind="function"><name>G_move</name></member>
+    <member refid="funkcje_8h_1affed50109cf9d7406f3f93505c2c3478" kind="function"><name>S_move</name></member>
+    <member refid="funkcje_8h_1aa88d989322777f6cb2aa8165addf5db4" kind="function"><name>W_move</name></member>
+    <member refid="funkcje_8h_1a6aedc44014be43cd9de923e72dd64f63" kind="function"><name>P_move</name></member>
+    <member refid="funkcje_8h_1adc778fee0c72604e27f124250e835a2b" kind="function"><name>K_move</name></member>
+    <member refid="funkcje_8h_1aa139c68b70084a41701f94ca7ca47f2a" kind="function"><name>roszada</name></member>
+    <member refid="funkcje_8h_1abd723494e7e578cc9ea11f1e4daa0e7a" kind="function"><name>szach</name></member>
+    <member refid="funkcje_8h_1a8ae793b0dd910e1b4818227c4b722936" kind="function"><name>turn_check</name></member>
+    <member refid="funkcje_8h_1ac5e01987e69cb78283f36dd8671a78dc" kind="function"><name>points_check</name></member>
+    <member refid="funkcje_8h_1a77258fa3cfd1986bb32f6187ed17624d" kind="function"><name>computer_turn</name></member>
+    <member refid="funkcje_8h_1aeadffb331f419ad4189c13390d2fd239" kind="function"><name>mat</name></member>
+    <member refid="funkcje_8h_1aadab7413cd8e2df74ba7ce32a7785f84" kind="function"><name>turn</name></member>
+  </compound>
+  <compound refid="_szachy_8cpp" kind="file"><name>Szachy.cpp</name>
+    <member refid="_szachy_8cpp_1a1614f028c1fef258edfb81fb963609cb" kind="define"><name>debug</name></member>
+    <member refid="_szachy_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_szachy__rezerv_8cpp" kind="file"><name>Szachy_rezerv.cpp</name>
+    <member refid="_szachy__rezerv_8cpp_1aabaa1bd1eed76e739bbc16c7e4e72549" kind="variable"><name>P</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a0744ff3339006ade1e4eaebef38dc016" kind="variable"><name>S</name></member>
+    <member refid="_szachy__rezerv_8cpp_1aef4cec5b370242d799755d59d55bb8cc" kind="variable"><name>G</name></member>
+    <member refid="_szachy__rezerv_8cpp_1ab21b528bc38899d04d3a7053e52fb797" kind="variable"><name>W</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a0f4b0111b93bf2933b351bba78cc9f79" kind="variable"><name>H</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a7b63ccc35ac484b9f41e37ccd0cb31bd" kind="variable"><name>K</name></member>
+    <member refid="_szachy__rezerv_8cpp_1ae01842c839d789a39da9ea0b89c55d0f" kind="variable"><name>P2</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a79658f39323ac91830d1436253543738" kind="variable"><name>S2</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a09fcc9381eb059fd8b79dcf3adf225d3" kind="variable"><name>G2</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a409666b525eefc0901c384670d4f6049" kind="variable"><name>W2</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a7d4357b69ebb83917cffe2512729ac80" kind="variable"><name>H2</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a0e7d76f2e93a4b6fd10315f420d73b97" kind="variable"><name>K2</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a0e52b674993f9cc752580f7ae175915e" kind="variable"><name>tablica</name></member>
+    <member refid="_szachy__rezerv_8cpp_1ac8587c845e18010285386576a41e34a0" kind="function"><name>arrangement</name></member>
+    <member refid="_szachy__rezerv_8cpp_1ad62eb2d28dd40ee33d9ff3981489cd04" kind="function"><name>y_toint</name></member>
+    <member refid="_szachy__rezerv_8cpp_1af31af3239cf88b06451f38ec9b0fc0f3" kind="function"><name>W_move</name></member>
+    <member refid="_szachy__rezerv_8cpp_1ac3433b5785c8667614d4067a1c28e459" kind="function"><name>P_move</name></member>
+    <member refid="_szachy__rezerv_8cpp_1a5092f825b5e97bc2b684c5ccd8b17618" kind="function"><name>turn</name></member>
+    <member refid="_szachy__rezerv_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+</doxygenindex>

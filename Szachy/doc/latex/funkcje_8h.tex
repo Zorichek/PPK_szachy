@@ -1,0 +1,345 @@
+\doxysection{Dokumentacja pliku funkcje.\+h}
+\label{funkcje_8h}\index{funkcje.h@{funkcje.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ y\+\_\+toint} (char y\+\_\+cord)
+\item 
+string \textbf{ figura\+\_\+name} (int figura\+\_\+number)
+\item 
+bool \textbf{ H\+\_\+move} (int start\+\_\+x, int start\+\_\+y, int end\+\_\+x, int end\+\_\+y, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ G\+\_\+move} (int start\+\_\+x, int start\+\_\+y, int end\+\_\+x, int end\+\_\+y, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ S\+\_\+move} (int start\+\_\+x, int start\+\_\+y, int end\+\_\+x, int end\+\_\+y, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ W\+\_\+move} (int start\+\_\+x, int start\+\_\+y, int end\+\_\+x, int end\+\_\+y, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ P\+\_\+move} (int start\+\_\+x, int start\+\_\+y, int end\+\_\+x, int end\+\_\+y, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ K\+\_\+move} (int start\+\_\+x, int start\+\_\+y, int end\+\_\+x, int end\+\_\+y, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ roszada} (int start\+\_\+x1, int start\+\_\+y1, int end\+\_\+x1, int end\+\_\+y1, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ szach} (bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+bool \textbf{ turn\+\_\+check} (int start\+\_\+x, int end\+\_\+x, int start\+\_\+y, int end\+\_\+y, bool player, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+int \textbf{ points\+\_\+check} (int start\+\_\+x, int end\+\_\+x, int start\+\_\+y, int end\+\_\+y, vector$<$ vector$<$ int $>$ $>$ tablica)
+\item 
+vector$<$ vector$<$ int $>$ $>$ \textbf{ computer\+\_\+turn} (vector$<$ vector$<$ int $>$ $>$ tablica1, vector$<$ vector$<$ bool $>$ $>$ tablica2)
+\item 
+bool \textbf{ mat} (vector$<$ vector$<$ int $>$ $>$ tablica1)
+\item 
+void \textbf{ turn} (vector$<$ vector$<$ int $>$ $>$ tablica, vector$<$ vector$<$ bool $>$ $>$ tablica1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\label{funkcje_8h_a77258fa3cfd1986bb32f6187ed17624d}} 
+\index{funkcje.h@{funkcje.h}!computer\_turn@{computer\_turn}}
+\index{computer\_turn@{computer\_turn}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{computer\_turn()}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ computer\+\_\+turn (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica1,  }\item[{vector$<$ vector$<$ bool $>$ $>$}]{tablica2 }\end{DoxyParamCaption})}
+
+Funkcja, która wyszukuje najlepsze ruchy komputera, biorąc pod uwagę stan tablicy 
+\begin{DoxyParams}{Parametry}
+{\em tablica1} & aktualny stan tablicy \\
+\hline
+{\em tablica2} & miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+stan tablicy po ruchu komputera 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_a7666f7a19c58183a129525c3a4b40ec7}} 
+\index{funkcje.h@{funkcje.h}!figura\_name@{figura\_name}}
+\index{figura\_name@{figura\_name}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{figura\_name()}
+{\footnotesize\ttfamily string figura\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{figura\+\_\+number }\end{DoxyParamCaption})}
+
+Funkcja pobiera liczbę i zapisuje ją jako opisującą ją literę 
+\begin{DoxyParams}{Parametry}
+{\em figura\+\_\+name} & liczba opisująca figurę \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+literę opisującą figurę 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_aed1880e04687e9ec3cf2c0f09a585ff7}} 
+\index{funkcje.h@{funkcje.h}!G\_move@{G\_move}}
+\index{G\_move@{G\_move}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{G\_move()}
+{\footnotesize\ttfamily bool G\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{end\+\_\+y,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości ruchu gońca 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwy ruch gońca 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_a968d1a5cced2794d07d040943caeb05a}} 
+\index{funkcje.h@{funkcje.h}!H\_move@{H\_move}}
+\index{H\_move@{H\_move}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{H\_move()}
+{\footnotesize\ttfamily bool H\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{end\+\_\+y,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości ruchu hetmana 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwy ruch hetmana 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_adc778fee0c72604e27f124250e835a2b}} 
+\index{funkcje.h@{funkcje.h}!K\_move@{K\_move}}
+\index{K\_move@{K\_move}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{K\_move()}
+{\footnotesize\ttfamily bool K\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{end\+\_\+y,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości ruchu króla 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwy ruch króla 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_aeadffb331f419ad4189c13390d2fd239}} 
+\index{funkcje.h@{funkcje.h}!mat@{mat}}
+\index{mat@{mat}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{mat()}
+{\footnotesize\ttfamily bool mat (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica1 }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania matu na tablicy 
+\begin{DoxyParams}{Parametry}
+{\em tablica1} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest mat na tablicy 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_a6aedc44014be43cd9de923e72dd64f63}} 
+\index{funkcje.h@{funkcje.h}!P\_move@{P\_move}}
+\index{P\_move@{P\_move}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{P\_move()}
+{\footnotesize\ttfamily bool P\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{end\+\_\+y,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości ruchu piona 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwy ruch piona 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_ac5e01987e69cb78283f36dd8671a78dc}} 
+\index{funkcje.h@{funkcje.h}!points\_check@{points\_check}}
+\index{points\_check@{points\_check}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{points\_check()}
+{\footnotesize\ttfamily int points\+\_\+check (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+y,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzająca ile punktów komputer zdobędzie za dany ruch 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+ilość punktów za jeden ruch 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_aa139c68b70084a41701f94ca7ca47f2a}} 
+\index{funkcje.h@{funkcje.h}!roszada@{roszada}}
+\index{roszada@{roszada}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{roszada()}
+{\footnotesize\ttfamily bool roszada (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x1,  }\item[{int}]{start\+\_\+y1,  }\item[{int}]{end\+\_\+x1,  }\item[{int}]{end\+\_\+y1,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości rozszady 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwa roszada 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_affed50109cf9d7406f3f93505c2c3478}} 
+\index{funkcje.h@{funkcje.h}!S\_move@{S\_move}}
+\index{S\_move@{S\_move}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{S\_move()}
+{\footnotesize\ttfamily bool S\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{end\+\_\+y,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości ruchu skoczka 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwy ruch skoczka 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_abd723494e7e578cc9ea11f1e4daa0e7a}} 
+\index{funkcje.h@{funkcje.h}!szach@{szach}}
+\index{szach@{szach}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{szach()}
+{\footnotesize\ttfamily bool szach (\begin{DoxyParamCaption}\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania szachu na tablicy 
+\begin{DoxyParams}{Parametry}
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest szach na tablicy 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_aadab7413cd8e2df74ba7ce32a7785f84}} 
+\index{funkcje.h@{funkcje.h}!turn@{turn}}
+\index{turn@{turn}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{turn()}
+{\footnotesize\ttfamily void turn (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica,  }\item[{vector$<$ vector$<$ bool $>$ $>$}]{tablica1 }\end{DoxyParamCaption})}
+
+Główna zapętlona funkcja programu, w której wykonywane są wszystkie sprawdzenia ruchu gracza 
+\begin{DoxyParams}{Parametry}
+{\em tablica} & aktualny stan tablicy \\
+\hline
+{\em tablica1} & miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8h_a8ae793b0dd910e1b4818227c4b722936}} 
+\index{funkcje.h@{funkcje.h}!turn\_check@{turn\_check}}
+\index{turn\_check@{turn\_check}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{turn\_check()}
+{\footnotesize\ttfamily bool turn\+\_\+check (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+y,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości ruchu dla podanej figury przez komputera 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwy taki ruch 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_aa88d989322777f6cb2aa8165addf5db4}} 
+\index{funkcje.h@{funkcje.h}!W\_move@{W\_move}}
+\index{W\_move@{W\_move}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{W\_move()}
+{\footnotesize\ttfamily bool W\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{end\+\_\+y,  }\item[{bool}]{player,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{tablica }\end{DoxyParamCaption})}
+
+Funkcja sprawdzania możliwości ruchu wieży 
+\begin{DoxyParams}{Parametry}
+{\em start\+\_\+x} & startowa współrzędna x \\
+\hline
+{\em start\+\_\+y} & startowa współrzędna y \\
+\hline
+{\em end\+\_\+x} & końcowa współrzędna x \\
+\hline
+{\em end\+\_\+y} & końcowa współrzędna y \\
+\hline
+{\em player} & zmienna gracza \\
+\hline
+{\em tablica} & aktualny stan tablicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy jest możliwy ruch wieży 
+\end{DoxyReturn}
+\mbox{\label{funkcje_8h_ad62eb2d28dd40ee33d9ff3981489cd04}} 
+\index{funkcje.h@{funkcje.h}!y\_toint@{y\_toint}}
+\index{y\_toint@{y\_toint}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{y\_toint()}
+{\footnotesize\ttfamily int y\+\_\+toint (\begin{DoxyParamCaption}\item[{char}]{y\+\_\+cord }\end{DoxyParamCaption})}
+
+Funkcja pobiera literę ze współrzędnej y i zwraca ją jako liczbę 
+\begin{DoxyParams}{Parametry}
+{\em y\+\_\+toint} & współrzędna y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+współrzędną y 
+\end{DoxyReturn}

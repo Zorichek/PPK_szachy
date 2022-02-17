@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_funkcje_8h_source" xml:lang="pl">
+<title>funkcje.h</title>
+Idź do dokumentacji tego pliku.<programlisting linenumbering="unnumbered">1 
+4 <emphasis role="preprocessor">#ifndef&#32;FUNKCJE_H</emphasis>
+5 <emphasis role="preprocessor">#define&#32;FUNKCJE_H</emphasis>
+6 
+7 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&lt;cstdio&gt;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+11 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+12 
+13 
+19 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_funkcje_8h_1ad62eb2d28dd40ee33d9ff3981489cd04">y_toint</link>(<emphasis role="keywordtype">char</emphasis>&#32;y_cord);
+20 
+26 <emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_funkcje_8h_1a7666f7a19c58183a129525c3a4b40ec7">figura_name</link>(<emphasis role="keywordtype">int</emphasis>&#32;figura_number);
+27 
+28 
+39 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1a968d1a5cced2794d07d040943caeb05a">H_move</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+40 
+41 
+52 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1aed1880e04687e9ec3cf2c0f09a585ff7">G_move</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+53 
+64 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1affed50109cf9d7406f3f93505c2c3478">S_move</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+65 
+77 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1aa88d989322777f6cb2aa8165addf5db4">W_move</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+78 
+91 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1a6aedc44014be43cd9de923e72dd64f63">P_move</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+92 
+93 
+104 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1adc778fee0c72604e27f124250e835a2b">K_move</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+105 
+106 
+107 
+119 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1aa139c68b70084a41701f94ca7ca47f2a">roszada</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x1,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y1,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x1,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y1,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+120 
+121 
+122 
+130 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1abd723494e7e578cc9ea11f1e4daa0e7a">szach</link>(<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+131 
+132 
+145 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1a8ae793b0dd910e1b4818227c4b722936">turn_check</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;player,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+146 
+147 
+160 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_funkcje_8h_1ac5e01987e69cb78283f36dd8671a78dc">points_check</link>(<emphasis role="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;end_y,&#32;vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica);
+161 
+162 
+172 vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;<link linkend="_funkcje_8h_1a77258fa3cfd1986bb32f6187ed17624d">computer_turn</link>(vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica1,&#32;vector&#32;&lt;&#32;vector&#32;&lt;bool&gt;&#32;&gt;&#32;tablica2);
+173 
+174 
+175 
+183 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_funkcje_8h_1aeadffb331f419ad4189c13390d2fd239">mat</link>(vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica1);
+184 
+185 
+195 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_funkcje_8h_1aadab7413cd8e2df74ba7ce32a7785f84">turn</link>(vector&#32;&lt;&#32;vector&#32;&lt;int&gt;&#32;&gt;&#32;tablica,&#32;vector&#32;&lt;&#32;vector&#32;&lt;bool&gt;&#32;&gt;&#32;tablica1);
+196 
+197 
+198 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

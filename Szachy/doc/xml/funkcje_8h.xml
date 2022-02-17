@@ -1,0 +1,1108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="pl">
+  <compounddef id="funkcje_8h" kind="file" language="C++">
+    <compoundname>funkcje.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includedby refid="_szachy_8cpp" local="yes">Szachy.cpp</includedby>
+    <includedby refid="funkcje_8cpp" local="yes">funkcje.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>funkcje.h</label>
+        <link refid="funkcje_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdio</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="funkcje_8h_1ad62eb2d28dd40ee33d9ff3981489cd04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int y_toint</definition>
+        <argsstring>(char y_cord)</argsstring>
+        <name>y_toint</name>
+        <param>
+          <type>char</type>
+          <declname>y_cord</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja pobiera literę ze współrzędnej y i zwraca ją jako liczbę <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y_toint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>współrzędną y </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="19" column="5" bodyfile="funkcje.cpp" bodystart="12" bodyend="26" declfile="funkcje.h" declline="19" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1a7666f7a19c58183a129525c3a4b40ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string figura_name</definition>
+        <argsstring>(int figura_number)</argsstring>
+        <name>figura_name</name>
+        <param>
+          <type>int</type>
+          <declname>figura_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja pobiera liczbę i zapisuje ją jako opisującą ją literę <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>figura_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>liczba opisująca figurę </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>literę opisującą figurę </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="26" column="8" bodyfile="funkcje.cpp" bodystart="30" bodyend="49" declfile="funkcje.h" declline="26" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1a968d1a5cced2794d07d040943caeb05a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool H_move</definition>
+        <argsstring>(int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>H_move</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości ruchu hetmana <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwy ruch hetmana </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="39" column="6" bodyfile="funkcje.cpp" bodystart="52" bodyend="184" declfile="funkcje.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1aed1880e04687e9ec3cf2c0f09a585ff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool G_move</definition>
+        <argsstring>(int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>G_move</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości ruchu gońca <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwy ruch gońca </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="52" column="6" bodyfile="funkcje.cpp" bodystart="188" bodyend="285" declfile="funkcje.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1affed50109cf9d7406f3f93505c2c3478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool S_move</definition>
+        <argsstring>(int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>S_move</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości ruchu skoczka <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwy ruch skoczka </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="64" column="6" bodyfile="funkcje.cpp" bodystart="288" bodyend="328" declfile="funkcje.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1aa88d989322777f6cb2aa8165addf5db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool W_move</definition>
+        <argsstring>(int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>W_move</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości ruchu wieży <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwy ruch wieży </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="77" column="6" bodyfile="funkcje.cpp" bodystart="330" bodyend="408" declfile="funkcje.h" declline="77" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1a6aedc44014be43cd9de923e72dd64f63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool P_move</definition>
+        <argsstring>(int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>P_move</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości ruchu piona <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwy ruch piona </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="91" column="6" bodyfile="funkcje.cpp" bodystart="410" bodyend="466" declfile="funkcje.h" declline="91" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1adc778fee0c72604e27f124250e835a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool K_move</definition>
+        <argsstring>(int start_x, int start_y, int end_x, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>K_move</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości ruchu króla <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwy ruch króla </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="104" column="6" bodyfile="funkcje.cpp" bodystart="468" bodyend="500" declfile="funkcje.h" declline="104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1aa139c68b70084a41701f94ca7ca47f2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool roszada</definition>
+        <argsstring>(int start_x1, int start_y1, int end_x1, int end_y1, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>roszada</name>
+        <param>
+          <type>int</type>
+          <declname>start_x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y1</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości rozszady <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwa roszada </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="119" column="6" bodyfile="funkcje.cpp" bodystart="502" bodyend="785" declfile="funkcje.h" declline="119" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1abd723494e7e578cc9ea11f1e4daa0e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool szach</definition>
+        <argsstring>(bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>szach</name>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania szachu na tablicy <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest szach na tablicy </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="130" column="6" bodyfile="funkcje.cpp" bodystart="788" bodyend="914" declfile="funkcje.h" declline="130" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1a8ae793b0dd910e1b4818227c4b722936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool turn_check</definition>
+        <argsstring>(int start_x, int end_x, int start_y, int end_y, bool player, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>turn_check</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania możliwości ruchu dla podanej figury przez komputera <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest możliwy taki ruch </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="145" column="6" bodyfile="funkcje.cpp" bodystart="916" bodyend="996" declfile="funkcje.h" declline="145" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1ac5e01987e69cb78283f36dd8671a78dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int points_check</definition>
+        <argsstring>(int start_x, int end_x, int start_y, int end_y, vector&lt; vector&lt; int &gt; &gt; tablica)</argsstring>
+        <name>points_check</name>
+        <param>
+          <type>int</type>
+          <declname>start_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_y</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzająca ile punktów komputer zdobędzie za dany ruch <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>końcowa współrzędna y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zmienna gracza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ilość punktów za jeden ruch </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="160" column="5" bodyfile="funkcje.cpp" bodystart="998" bodyend="1074" declfile="funkcje.h" declline="160" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1a77258fa3cfd1986bb32f6187ed17624d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; int &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; int &gt; &gt; computer_turn</definition>
+        <argsstring>(vector&lt; vector&lt; int &gt; &gt; tablica1, vector&lt; vector&lt; bool &gt; &gt; tablica2)</argsstring>
+        <name>computer_turn</name>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica1</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+          <declname>tablica2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja, która wyszukuje najlepsze ruchy komputera, biorąc pod uwagę stan tablicy <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tablica1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>stan tablicy po ruchu komputera </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="172" column="9" bodyfile="funkcje.cpp" bodystart="1078" bodyend="1311" declfile="funkcje.h" declline="172" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1aeadffb331f419ad4189c13390d2fd239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mat</definition>
+        <argsstring>(vector&lt; vector&lt; int &gt; &gt; tablica1)</argsstring>
+        <name>mat</name>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Funkcja sprawdzania matu na tablicy <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tablica1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>czy jest mat na tablicy </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="183" column="6" bodyfile="funkcje.cpp" bodystart="1313" bodyend="1342" declfile="funkcje.h" declline="183" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="funkcje_8h_1aadab7413cd8e2df74ba7ce32a7785f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void turn</definition>
+        <argsstring>(vector&lt; vector&lt; int &gt; &gt; tablica, vector&lt; vector&lt; bool &gt; &gt; tablica1)</argsstring>
+        <name>turn</name>
+        <param>
+          <type>vector&lt; vector&lt; int &gt; &gt;</type>
+          <declname>tablica</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+          <declname>tablica1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Główna zapętlona funkcja programu, w której wykonywane są wszystkie sprawdzenia ruchu gracza <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tablica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aktualny stan tablicy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tablica1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>miejsca na tablicy, w których wskazano figury, które przesunęły się już w ciągu jednego cyklu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="funkcje.h" line="195" column="6" bodyfile="funkcje.cpp" bodystart="1345" bodyend="1655" declfile="funkcje.h" declline="195" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FUNKCJE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUNKCJE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1ad62eb2d28dd40ee33d9ff3981489cd04" kindref="member">y_toint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>y_cord);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1a7666f7a19c58183a129525c3a4b40ec7" kindref="member">figura_name</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>figura_number);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1a968d1a5cced2794d07d040943caeb05a" kindref="member">H_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1aed1880e04687e9ec3cf2c0f09a585ff7" kindref="member">G_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1affed50109cf9d7406f3f93505c2c3478" kindref="member">S_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1aa88d989322777f6cb2aa8165addf5db4" kindref="member">W_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1a6aedc44014be43cd9de923e72dd64f63" kindref="member">P_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1adc778fee0c72604e27f124250e835a2b" kindref="member">K_move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1aa139c68b70084a41701f94ca7ca47f2a" kindref="member">roszada</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1abd723494e7e578cc9ea11f1e4daa0e7a" kindref="member">szach</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1a8ae793b0dd910e1b4818227c4b722936" kindref="member">turn_check</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>player,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1ac5e01987e69cb78283f36dd8671a78dc" kindref="member">points_check</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/><ref refid="funkcje_8h_1a77258fa3cfd1986bb32f6187ed17624d" kindref="member">computer_turn</ref>(vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica1,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;bool&gt;<sp/>&gt;<sp/>tablica2);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1aeadffb331f419ad4189c13390d2fd239" kindref="member">mat</ref>(vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica1);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="funkcje_8h_1aadab7413cd8e2df74ba7ce32a7785f84" kindref="member">turn</ref>(vector<sp/>&lt;<sp/>vector<sp/>&lt;int&gt;<sp/>&gt;<sp/>tablica,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;bool&gt;<sp/>&gt;<sp/>tablica1);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="funkcje.h"/>
+  </compounddef>
+</doxygen>
